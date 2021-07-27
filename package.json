@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "A dockerized node application with postgres database.",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start": "node ./build/index.js",
+    "start:dev": "concurrently -k \"tsc -w\" \"nodemon\""
+  },
+  "keywords": [],
+  "author": "Redhouane Sobaihi <redouane.sobaihi@live.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/hapi-pino": "^8.0.2",
+    "@types/hapi__hapi": "^20.0.9",
+    "@types/node": "^16.4.3",
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.1.5",
+    "dotenv": "^10.0.0",
+    "hapi-pino": "^8.3.0"
+  }
+}
